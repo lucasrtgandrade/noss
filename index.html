@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/nav.js" defer></script>
+    <script src="js/full-height.js"></script>
+    <script src="js/carousel-home.js" defer></script>
+    <title>Home</title>
+</head>
+<body>
+    <!-- || Navigation Menu -->
+    <header>
+        <div class="main-header header-style">
+            <div class="empty"></div>
+            <div class="hamburger-resize">
+                <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                    <span class="sr-only">Menu</span>
+                </button>
+            </div>
+            <div class="main-logo">
+                <a class="main-logo" href="index.html">NOSS</a>
+            </div>
+            <div class="main-icons">
+                <a href="https://www.instagram.com/nossarquitetura/">
+                    <i class="fa-brands fa-instagram main-instagram"></i>
+                </a>
+                <a href="#"><i class="fa-brands fa-whatsapp main-whatsapp"></i></a>
+            </div>
+        </div>
+        <nav id="primary-navigation" class="primary-navigation" data-visible="false">
+            <div class="mobile-empty"></div>
+            <ul class="main-navigation nobullets">
+                <li><a class="nav-links-color" href="index.html">Home</a></li>
+                <li><a class="nav-links-color" href="html/sobre.html">Sobre</a></li>
+                <li><a class="nav-links-color" href="html/projetos.html">Projetos</a></li>
+                <li><a class="nav-links-color" href="html/contato.html">Contato</a></li>
+            </ul>
+            <div class="mobile-info">
+                <div class="mobile-logo">NOSS</div>
+                <div class="mobile-icons">
+                    <a href="https://www.instagram.com/nossarquitetura/">
+                        <i class="fa-brands fa-instagram mobile-instagram"></i>
+                    </a>
+                    <a href="#"><i class="fa-brands fa-whatsapp mobile-whatsapp"></i></a>
+                </div>
+                    <address class="bottom-space">
+                        Alameda Barão de Limeira, 1306 cj.43 <br>
+                        São Paulo - SP
+                    </address>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- || Main Content -->
+    <main class="minHeight">
+        <ul class="carousel nobullets">
+            <li class="carousel-list">
+                <picture>
+                    <source class="carousel-image active" media="(min-width: 1000px)" srcset="images/desktop.jpg">
+                    <source class="carousel-image" media="(min-width: 600px)" srcset="images/tablet.jpg">
+                    <img class="carousel-image" src="images/mobile.jpg">
+                </picture>
+            </li>
+            <li class="carousel-list">
+                <img class="carousel-image" src="images/noss-apwestside-bx-7.jpg">
+            </li>
+            <li class="carousel-list">
+                <img class="carousel-image" src="images/noss-apwestside-bx-15.jpg">
+            </li>
+        </ul>
+        <button class="prev-button">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="next-button">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="carousel-nav">
+            <button class="carousel-indicator active-dot" data-index="0"></button>
+            <button class="carousel-indicator" data-index="1"></button>
+            <button class="carousel-indicator" data-index="2"></button>
+        </div>
+    </main>
+    <footer class="foot-space">
+    </footer>
+</body>
+</html>
