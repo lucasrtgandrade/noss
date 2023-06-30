@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/projetos-stylesheet.css">
     <script src="../js/nav.js" defer></script>
     <script src="../js/full-height.js"></script>
-    <script src="../js/carousel.js"></script>
     <title>Projetos</title>
 </head>
 <body>
@@ -22,7 +21,7 @@
                 </button>
             </div>
             <div class="main-logo">
-                <a class="main-logo" href="..index.html">NOSS</a>
+                <a class="main-logo" href="index.html">NOSS</a>
             </div>
             <div class="main-icons">
                 <a href="https://www.instagram.com/nossarquitetura/">
@@ -54,17 +53,29 @@
                 </div>
             </div>
         </nav>
+        <div class="tabs-wrapper">
+            <input type="radio" name="slider" id="todos" checked>
+            <input type="radio" name="slider" id="corporativo">
+            <input type="radio" name="slider" id="residencial">
+            <nav class="tabs">
+                <label class="label-name todos" for="todos">Todos</label>
+                <label class="label-name corporativo" for="corporativo">Corporativo</label>
+                <label class="label-name residencial" for="residencial">Residencial</label>
+            </nav>
+        </div>
     </header>
 
     <!-- || Main -->
     <main class="minHeight">
-        <nav class="tabs">
-            <label class="label-name todos" for="">Todos</label>
-            <label class="label-name corporativo" for="">Corporativo</label>
-            <label class="label-name residencial" for="">Residencial</label>  
-        </nav>
+        <div class="slider">
+            <div class="carousel">
+                <img class="carousel-image" src="/images/mobile-01.jpg">
+                <img class="carousel-image" src="/images/mobile-02.jpg">
+                <img class="carousel-image" src="/images/mobile-03.jpg">
+            </div>
+        </div>
     </main>
-    <footer class="foot-space"></footer>
-    
+    <footer class="foot-space">
+    </footer>  
 </body>
 </html>

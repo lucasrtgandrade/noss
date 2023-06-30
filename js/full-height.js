@@ -8,3 +8,4 @@ function setMinHeight(){
 
     window.addEventListener('DOMContentLoaded', setMinHeight);
     window.addEventListener('resize', setMinHeight);
+

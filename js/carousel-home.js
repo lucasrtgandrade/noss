@@ -58,5 +58,10 @@ for (let i = 0; i < dots.length; i++) {
 
 // Swipe
 
+const dragging = (e) => {
+  console.log(e.pageX);
+}
+
+carousel.addEventListener("mousemove", dragging);
 
 

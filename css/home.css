@@ -382,6 +382,52 @@ address {
 
 /* || Página Home */
 
+/* || Tabs */
+
+.tabs {
+    /* || Font base style */
+    font-size: var(--fs-400);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: var(--clr-support-500);
+    line-height: 180%;
+    text-align: center;
+    margin: 0 auto;
+    /* || Position */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 25rem;
+}
+
+.label-name {
+    padding-top: .8rem;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+
+.todos,
+.corporativo,
+.residencial {
+    border-bottom: 2px solid var(--clr-support-500);
+}
+
+#todos:checked ~ nav .label-name.todos,
+#corporativo:checked ~ nav .label-name.corporativo,
+#residencial:checked ~ nav .label-name.residencial {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--clr-primary-700);
+    border-bottom: 4px solid var(--clr-primary-700);
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+/* || Home */
+
 .minHeight {
     position: relative;
     overflow: hidden;
@@ -389,8 +435,8 @@ address {
 
 .carousel {
     height: 100%;
-    position: absolute;
     width: 300%;
+    position: absolute;
     transition: left 450ms ease-out;
 }
 
@@ -407,11 +453,7 @@ address {
     transition: transform 0.3s ease-in-out;
 }
 
-.carousel
 
-picture {
-    height: inherit;
-}
 
 /* || Carousel Nav */
 
@@ -489,3 +531,6 @@ button {
     width: 1rem;
     height: 1rem;
 }
+
+
+  
