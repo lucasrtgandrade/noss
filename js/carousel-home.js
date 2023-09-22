@@ -5,6 +5,8 @@ const prevButton = carousel.querySelector('.prev-button');
 const nextButton = carousel.querySelector('.next-button');
 const dots = carousel.querySelectorAll('.carousel-indicator');
 
+const currentSlide = document.querySelector('.current-slide');
+
 let currentIndex = 0;
 
 function showImage() {
@@ -19,7 +21,7 @@ function prevImage() {
     currentIndex = carouselItems.length - 1;
   }
   showImage();
-  updateDots();
+  updateIndicator()
 }
 
 function nextImage() {
@@ -29,7 +31,7 @@ function nextImage() {
     currentIndex = 0;
   }
   showImage();
-  updateDots();
+  updateIndicator()
 }
 
 function handleDotClick() {
@@ -37,6 +39,13 @@ function handleDotClick() {
   currentIndex = index;
   showImage();
   updateDots();
+}
+
+prevButton.addEventListener('click', prevImage);
+nextButton.addEventListener('click', nextImage);
+
+for (let i = 0; i < dots.length; i++) {
+  dots[i].addEventListener('click', handleDotClick);
 }
 
 function updateDots() {
@@ -49,19 +58,8 @@ function updateDots() {
   }
 }
 
-prevButton.addEventListener('click', prevImage);
-nextButton.addEventListener('click', nextImage);
-
-for (let i = 0; i < dots.length; i++) {
-  dots[i].addEventListener('click', handleDotClick);
+// Function to update the indicator
+function updateIndicator() {
+  currentSlide.textContent = currentIndex + 1;
 }
-
-// Swipe
-
-const dragging = (e) => {
-  console.log(e.pageX);
-}
-
-carousel.addEventListener("mousemove", dragging);
-
 
