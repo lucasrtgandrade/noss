@@ -1,0 +1,196 @@
+.minHeight {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel {
+    height: 100%;
+    width: 700%;
+    position: absolute;
+    transition: left 450ms ease-out;
+}
+
+.carousel-list {
+    height: 100%;
+    width: 14.285%;
+    float: left;
+}
+
+.image-container {
+    height: 91%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: auto;
+}
+
+.carousel-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-header {
+    padding: .563rem;
+    color: var(--clr-primary-500);
+}
+
+.project-title {
+    height: 8.45%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 900px;
+}
+
+.cta-mobile {
+    display: none;
+}
+
+@media (max-width: 37.5rem) {
+
+    .project-icon-mobile {
+        padding: .5rem;
+    }
+
+    .cta-mobile {
+        background: var(--clr-primary-500);
+        color: var(--clr-support-300);
+        font-size: 1rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        padding: .3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer; 
+    }
+
+    .project-icon-large {
+        display: none;
+    }
+    
+}
+
+@media (min-width: 37.6rem) {
+
+    .cta-mobile {
+        display: none;
+    }
+    
+    .project-icon-large {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--clr-primary-500);
+        padding: .5rem 1rem;
+        border-radius: .3rem;
+        gap: .8rem;
+        cursor: pointer;
+    }
+    
+    .cta-large {
+        color: var(--clr-support-300);
+    }
+    
+    .cta-text {
+        color: var(--clr-support-300);
+        font-weight: 700;
+    }
+}
+
+
+/* || Carousel Nav */
+
+.carousel-counter {
+    background-color: var(--clr-primary-500);
+    display: flex;
+    gap: .4rem;
+    padding: .7rem 1.5rem;
+    border-radius: 2rem;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    opacity: 90%;
+}
+
+.carousel-nav {
+    background-color: var(--clr-primary-500);
+    opacity: 80%;
+    display: flex;
+    gap: 1rem;
+    padding: .7rem 1.5rem;
+    border-radius: 2rem;
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.carousel-indicator {
+    border: 2px solid var(--clr-support-300);
+    border-radius: 50%;
+    width: .75rem;
+    height: .75rem;
+    background: none;
+    cursor: pointer;
+}
+
+.active-dot {
+    background: var(--clr-support-300);
+    width: 1rem;
+    border-radius: .5rem;
+    transition: 450ms ease-in-out;
+    cursor: pointer;
+}
+
+/* CHEVRON */
+
+button {
+    border: 0;
+}
+
+.nav-carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    background: var(--clr-primary-500);
+    color: var(--clr-support-300);
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 70%;
+    transition: 0.3ms;
+}
+
+.fa-chevron-left {
+    position: absolute;
+    left: .5rem;
+    top: 50%;
+}
+
+.fa-chevron-right {
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover {
+    opacity: 100%;
+}

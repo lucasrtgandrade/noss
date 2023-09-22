@@ -1,0 +1,174 @@
+.minHeight {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* || Carousel */
+
+.carousel {
+    height: 92%;
+    width: 2500%;
+    position: absolute;
+    transition: left 450ms ease-out;
+    overflow: hidden;
+}
+
+.carousel-list {
+    height: 100%;
+    width: 4%;
+    float: left;
+}
+
+.image-container {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: auto;
+    position: relative;
+}
+
+.carousel-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* || Titles and buttons */
+
+.project-title {
+    position: absolute;
+    bottom: 0rem;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-around;
+    max-height: 7%;
+}
+
+.project-header {
+    padding: .563rem;
+    color: var(--clr-primary-500);
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.cta-mobile {
+    display: none;
+}
+
+@media (max-width: 37.5rem) {
+
+    .project-icon-mobile {
+        padding: .5rem;
+    }
+
+    .cta-mobile {
+        background: var(--clr-support-300);
+        color: var(--clr-primary-500);
+        font-size: 1rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer; 
+    }
+
+    .project-icon-large {
+        display: none;
+    }
+    
+}
+
+@media (min-width: 37.6rem) {
+
+    .cta-mobile {
+        display: none;
+    }
+    
+    .project-icon-large {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--clr-primary-500);
+        padding: .5rem 1rem;
+        border-radius: .3rem;
+        gap: .8rem;
+        cursor: pointer;
+    }
+    
+    .cta-large {
+        color: var(--clr-support-300);
+    }
+    
+    .cta-text {
+        color: var(--clr-support-300);
+        font-weight: 700;
+    }
+}
+
+
+/* || Carousel Counter */
+
+.carousel-counter {
+    background-color: var(--clr-primary-500);
+    display: flex;
+    gap: .4rem;
+    padding: .7rem 1.5rem;
+    border-radius: 2rem;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    opacity: 90%;
+}
+
+/* CHEVRON */
+
+button {
+    border: 0;
+}
+
+.nav-carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    background: var(--clr-primary-500);
+    color: var(--clr-support-300);
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 70%;
+    transition: 0.3ms;
+}
+
+.fa-chevron-left {
+    position: absolute;
+    left: .5rem;
+    top: 50%;
+}
+
+.fa-chevron-right {
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover {
+    opacity: 100%;
+}
